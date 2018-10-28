@@ -2,9 +2,20 @@
   "name": "server",
   "version": "1.0.0",
   "description": "coc server",
-  "main": "server.ts",
+  "main": "src/server.ts",
+  "engines": {
+    "node": "8.9.4",
+    "npm": "6.4.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "setup": "npm install",
+    "build": "tsc",
+    "build-watch": "tsc --watch",
+    "test-only": "jest src/",
+    "pretest": "npm run build",
+    "test": "jest src/",
+    "clean": "shx rm -rf node_modules/ dist/",
   },
   "author": "",
   "license": "ISC",
