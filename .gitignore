@@ -61,4 +61,5 @@ typings/
 .next
 
 coc-fullstack.iml
+server/server.iml
 dist
